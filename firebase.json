@@ -5,6 +5,7 @@
     ]
   },
   "hosting": {
+    "site": "dollarmatian-weather",
     "public": "build",
     "ignore": [
       "firebase.json",
