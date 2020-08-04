@@ -37,7 +37,7 @@ jobs:
       with:
         args: npm install  
       env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}  :  
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}    
       
      # Deployment
     - name: Deploy to Firebase
