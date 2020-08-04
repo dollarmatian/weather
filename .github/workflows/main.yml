@@ -29,7 +29,7 @@ jobs:
     
     # Run build
     - name: Build
-      run: npm run build
+      run: npm run build:prod
       
      # Deployment
     - name: Deploy to Firebase
