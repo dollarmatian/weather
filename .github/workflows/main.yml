@@ -36,6 +36,8 @@ jobs:
       uses: w9jds/firebase-action@master
       with:
         args: npm install  
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}  :  
       
      # Deployment
     - name: Deploy to Firebase
