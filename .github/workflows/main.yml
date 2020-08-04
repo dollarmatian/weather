@@ -31,13 +31,7 @@ jobs:
     - name: Build
       run: npm run build
       
-      # Firebase Dependencies
-    - name: Firebase dependencies
-      uses: w9jds/firebase-action@master
-      with:
-        args: install  
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}    
+      
       
      # Deployment
     - name: Deploy to Firebase
