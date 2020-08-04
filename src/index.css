@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montseratt', sans-serif;
+  }
+
+  .app{
+    background-image: url("./assets/dalmatian-dogs.jpg");
+    background-size: cover;
+    background-position: top center;
+    transition: 1s ease-out;
+  }
+.app.warm{
+  background-image: url(./assets/dog-nice.jpg);
+}
+ main{
+   min-height: 100vh;
+   background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)) ;
+   padding: 25px;
+ }
+ .search-box{
+   width: 100%;
+   
+   margin: 0 0 75px;
+  bottom: 0; 
+  }
+
+.search-box .search-bar{
+  display: block;
+  width: 100%;
+  padding: 15px;
+  appearance: none;
+  
+  border: 1px solid rgba(0,0,0,0.3);
+  
+  outline: none;
+
+  background: rgba(255,255,255,.5);
+  border-radius: 12px;
+ 
+  box-shadow: 0.5px 2px rgba(0,0,0,0.2);
+  color: #313131;
+  transition: 0.5s ease;
+}
+.search-box .search-bar:focus{
+  background: rgba(255,255,255,.9);
+  box-shadow: 0.3px 3px rgba(0,0,0,0.4);
+}
+.info{
+  bottom: 0;
+  right: calc(50vw - 225px);
+  width: 450px;
+  position: absolute;
+  margin: 75px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,.4) ;
+  border-radius: 12px;
+  padding: 15px 25px;
+  box-shadow: 3px 6px rgba(0,0,0,0.4) 
+}
+.location-box .location{
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+.location-box .date{
+  color: #FFF;
+   font-size: 20px;
+   font-weight: 300;
+   font-style: italic;
+   text-align: center;
+   text-shadow: 1.5px 1.5px rgba(50,50,70,0.5);
+}
+.weather-box{
+  text-align: center;
+}
+.weather-box .temp{
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255,255,255,.4) ;
+  border-radius: 12px;
+  padding: 15px 25px;
+  color: #FFF;
+  font-size: 102px;
+  font-weight: 900;
+  text-shadow:3px 6px rgba(50,50,70,0.5);
+  text-align: center;
+  
+}
+.weather-box .weather{
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow:3px 6px rgba(50,50,70,0.5);
+}
