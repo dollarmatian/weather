@@ -39,7 +39,7 @@ function App() {
     return ` ${day} ${date} ${month} ${year}`;
   }
 
-  let Degrees_F_or_C = 'metric';
+  // let Degrees_F_or_C = 'metric';
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
