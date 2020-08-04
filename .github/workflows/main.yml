@@ -33,5 +33,5 @@ jobs:
       
     # Deployment
     - name: Deploy to Firebase
-      run: firebase deploy --only hosting:dollarmatian-weather  
+      run: firebase deploy   
       
