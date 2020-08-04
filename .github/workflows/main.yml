@@ -31,6 +31,12 @@ jobs:
     - name: Build
       run: npm run build
       
+      # Firebase Dependencies
+    - name: Firebase dependencies
+      uses: w9jds/firebase-action@master
+      with:
+        args: npm install  
+      
      # Deployment
     - name: Deploy to Firebase
       uses: w9jds/firebase-action@master
