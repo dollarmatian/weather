@@ -6,6 +6,7 @@
 
 body {
   font-family: 'montseratt', sans-serif;
+ 
   }
 
   .app{
@@ -13,6 +14,7 @@ body {
     background-size: cover;
     background-position: top center;
     transition: 1s ease-out;
+   
   }
 .app.warm{
   background-image: url(./assets/dog-nice.jpg);
@@ -21,41 +23,62 @@ body {
    min-height: 100vh;
    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)) ;
    padding: 25px;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
  }
  .search-box{
-   width: 100%;
-   
+     
+  display: flex;
+  flex-direction: column;
+  align-items: center;
    margin: 0 0 75px;
-  bottom: 0; 
+  
   }
-
+.search-box .title{
+  font-family: Fascinate Inline, 'Arial Narrow Bold', sans-serif;
+  background-image: linear-gradient(180deg, #FFF, #87F1FF);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px #0085a3);
+  font-size: calc(10px + 5vw);
+  font-weight: 400;
+  text-align: center;
+  margin: 20px;
+  text-transform: uppercase;
+  
+}
 .search-box .search-bar{
   display: block;
-  width: 100%;
+  width: 55vw;
+  min-width:315px;
   padding: 15px;
   appearance: none;
-  
   border: 1px solid rgba(0,0,0,0.3);
-  
   outline: none;
-
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.85);
   border-radius: 12px;
  
   box-shadow: 0.5px 2px rgba(0,0,0,0.2);
   color: #313131;
   transition: 0.5s ease;
+  font-size: 16px;
 }
 .search-box .search-bar:focus{
-  background: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.95);
   box-shadow: 0.3px 3px rgba(0,0,0,0.4);
 }
+.search-box .search-bar::placeholder{text-align: center;
+color: #000;}
 .info{
-  bottom: 0;
-  right: calc(50vw - 225px);
   width: 450px;
-  position: absolute;
-  margin: 75px auto;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +86,8 @@ body {
   background-color: rgba(255,255,255,.4) ;
   border-radius: 12px;
   padding: 15px 25px;
-  box-shadow: 3px 6px rgba(0,0,0,0.4) 
+  box-shadow: 3px 6px rgba(0,0,0,0.4) ;
+  max-width:90vw
 }
 .location-box .location{
   color: #FFF;
@@ -95,6 +119,7 @@ body {
   font-weight: 900;
   text-shadow:3px 6px rgba(50,50,70,0.5);
   text-align: center;
+  max-width: 280px;
   
 }
 .weather-box .weather{

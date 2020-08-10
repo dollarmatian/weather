@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 
-const API = {
-  key: "d911abcff80d2344f9d5e0a9ca3d3682",
-  base: "https://api.openweathermap.org/data/2.5/"
-}
-
-
 
 function App() {
   const [query, setQuery] = useState('');
@@ -13,13 +7,16 @@ function App() {
 
   const search = evt => {
     if (evt.key === "Enter") {
-      fetch(`${API.base}weather?q=${query}&units=metric&APPID=${API.key}`)
+      
+      const querySend = `q=${query}`
+      setQuery('');
+      fetch(`https://weather.dollarmatian.dev/openweather?q=${querySend}`)
         .then(res => res.json())
         .then(result => {
           setWeather(result);
 
-          setQuery('');
-          console.log(result)
+          
+          
 
         })
     }
@@ -36,20 +33,24 @@ function App() {
     let year = d.getFullYear();
 
 
-    return ` ${day} ${date} ${month} ${year}`;
+    return `${day}, ${date} ${month} ${year}`;
   }
 
   // let Degrees_F_or_C = 'metric';
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
+        
+         
         <div className="search-box">
-          <input type="text" className="search-bar" placeholder="Enter City Name"
+          <h1 className="title">Doggone Weather</h1>
+          <input type="text" className="search-bar" placeholder="Enter City (e.g. London or London,GB)"
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
           />
         </div>
+        
 
         {(typeof weather.main != "undefined") ? (
           <div className="info">
@@ -60,7 +61,7 @@ function App() {
             <div className="weather-box">
 
 
-              (<div className="temp">{Number((weather.main.temp)).toFixed(0)}℃</div>
+              <div className="temp">{Number((weather.main.temp)).toFixed(0)}℃</div>
 
               <div className="weather">{weather.weather[0].main}</div>
             </div>
